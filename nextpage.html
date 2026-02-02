@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RESITRACK</title>
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background: #f3f6fa;
+        margin: 0;
+        padding: 0;
+        color: #2b2b2b;
+    }
+
+    .back-btn {
+        margin: 30px;
+        padding: 12px 20px;
+        background: #1e3a5f;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        transition: 0.2s;
+    }
+
+    .back-btn:hover {
+        background: #244873;
+    }
+
+    .search-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 60%;
+        padding: 15px 20px;
+        border-radius: 14px;
+        border: 1px solid #c5cfdb;
+        background: #ffffff;
+        font-size: 15px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .table-container {
+        width: 95%;
+        margin: 40px auto;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    th {
+        background: #1e3a5f;
+        color: #ffffff;
+        text-align: left;
+        padding: 14px;
+        font-size: 15px;
+        letter-spacing: 0.4px;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #e5e9f0;
+        font-size: 13px;
+        vertical-align: top;
+    }
+
+    tr:hover { background: #f7f9fc; }
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+
+<div class="search-container">
+    <input id="resultsSearch" type="text" class="search-box" placeholder="Search again...">
+</div>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+    <th>S.No</th>
+    <th>Paper Title</th>
+    <th>Demographic Details</th>
+    <th>Cancer Type</th>
+    <th>Cancer Stage</th>
+    <th>External Factors</th>
+    <th>Resistance Mechanism</th>
+    <th>Evidence Level</th>
+    <th>Drug / Treatment</th>
+    <th>Failure Cause</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Modulation+of+the+tumor+microenvironment+and+mechanism+of+immunotherapy-based+drug+resistance+in+breast+cancer%22" target="_blank" style="color:#1e3a5f; font-weight:600; text-decoration:none;">
+    Modulation of the tumor microenvironment and mechanism of immunotherapy-based drug resistance in breast cancer
+  </a>
+</td>
+<td>Age 32–78 years; 100% Female; ~600 Patients; General Breast Cancer Cohort.</td>
+<td>Breast cancer (TNBC, HER2-positive)</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Hypoxia, immunosuppressive cytokines, prior chemotherapy</td>
+<td>PD-L1 overexpression, T-cell exhaustion, M2 macrophage polarization, TGF-β signaling</td>
+<td>Clinical cohorts and translational studies (~600 patients)</td>
+<td>Immunotherapy (pembrolizumab, atezolizumab); chemotherapy (paclitaxel, nab-paclitaxel)</td>
+<td>Suppressive tumor microenvironment limits immune checkpoint inhibitor response</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Targeted+therapy+and+drug+resistance+in+triple-negative+breast+cancer:+the+EGFR+axis%22" target="_blank" style="color:#1e3a5f; font-weight:600; text-decoration:none;">
+    Targeted therapy and drug resistance in triple-negative breast cancer: the EGFR axis
+  </a>
+</td>
+<td>Age 35–70 years; 100% Female; ~420 Patients; TNBC subtype.</td>
+<td>Triple-negative breast cancer</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Growth factor–rich microenvironment, prior taxane exposure</td>
+<td>EGFR overexpression, MAPK and PI3K pathway reactivation</td>
+<td>Clinical cohort studies and experimental validation (~420 patients)</td>
+<td>Targeted therapy (cetuximab, gefitinib, erlotinib); chemotherapy (paclitaxel)</td>
+<td>Downstream signaling remains active despite EGFR inhibition</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22EMT+mechanism+in+breast+cancer+metastasis+and+drug+resistance%22" target="_blank" style="color:#1e3a5f;">
+    EMT mechanism in breast cancer metastasis and drug resistance
+  </a>
+</td>
+<td>Age 40–75 years; 100% Female; ~350 Patients; Metastatic progression focus.</td>
+<td>Breast cancer (multiple subtypes)</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Hypoxia, inflammatory cytokines, stromal interaction</td>
+<td>EMT activation, E-cadherin loss, increased drug efflux transporter expression</td>
+<td>Clinical cohorts with mechanistic studies (~350 patients)</td>
+<td>Chemotherapy (doxorubicin, cisplatin, paclitaxel)</td>
+<td>EMT-driven phenotypic plasticity enables chemotherapy tolerance</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Drug+resistance+in+breast+cancer:+Mechanisms+and+strategies+for+management%22" target="_blank" style="color:#1e3a5f;">
+    Drug resistance in breast cancer: Mechanisms and strategies for management
+  </a>
+</td>
+<td>Age 28–80 years; 100% Female; >1,200 Patients.</td>
+<td>Breast cancer (all molecular subtypes)</td>
+<td>Stage I–II; stage III–IV</td>
+<td>Long-term therapy exposure, treatment-induced selective pressure</td>
+<td>Genetic mutations, drug transporter upregulation, tumor heterogeneity</td>
+<td>Large clinical cohorts and translational studies (>1,200 patients)</td>
+<td>Chemotherapy (doxorubicin, cyclophosphamide, paclitaxel); targeted therapy; endocrine therapy</td>
+<td>Multi-pathway resistance due to clonal evolution</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Drug+Resistance+in+Metastatic+Breast+Cancer:+Tumor+Targeted+Nanomedicine+to+the+Rescue%22" target="_blank" style="color:#1e3a5f;">
+    Drug Resistance in Metastatic Breast Cancer: Tumor Targeted Nanomedicine to the Rescue
+  </a>
+</td>
+<td>Age 45–72 years; 100% Female; ~180 Patients.</td>
+<td>Metastatic breast cancer</td>
+<td>Metastatic stage IV</td>
+<td>Poor drug penetration, systemic toxicity</td>
+<td>Drug efflux activation, inadequate intracellular drug accumulation</td>
+<td>Early-phase clinical studies (~180 patients)</td>
+<td>Nanomedicine (liposomal doxorubicin, nab-paclitaxel)</td>
+<td>Subtherapeutic drug levels at tumor site</td>
+</tr>
+
+<!-- CONTINUE SAME PATTERN -->
+
+<tr>
+<td>6</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Multi-Drug+Resistance+and+Breast+Cancer+Progression+via+TLR+Signaling%22" target="_blank" style="color:#1e3a5f;">
+    Multi-Drug Resistance and Breast Cancer Progression via TLR Signaling
+  </a>
+</td>
+<td>Age 38–74 years; 100% Female; ~300 Patients.</td>
+<td>Breast cancer</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Chronic inflammation, immune activation</td>
+<td>TLR overexpression, NF-κB activation, cytokine-mediated survival</td>
+<td>Clinical cohorts with molecular profiling (~300 patients)</td>
+<td>Chemotherapy (doxorubicin, paclitaxel, cisplatin)</td>
+<td>Inflammatory survival signaling suppresses drug-induced apoptosis</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Breast+cancer+drug+resistance:+Decoding+the+roles+of+Hippo+pathway+crosstalk%22" target="_blank" style="color:#1e3a5f;">
+    Breast cancer drug resistance: Decoding the roles of Hippo pathway crosstalk
+  </a>
+</td>
+<td>Age 41–76 years; 100% Female; ~260 Patients.</td>
+<td>Breast cancer</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Mechanical stress, altered cell density</td>
+<td>YAP and TAZ activation, Hippo pathway dysregulation</td>
+<td>Clinical cohorts and mechanistic studies (~260 patients)</td>
+<td>Chemotherapy (paclitaxel, doxorubicin); targeted therapy (lapatinib)</td>
+<td>Transcriptional reprogramming sustains resistant clones</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Mitochondrial+transfer+from+adipose+stem+cells+drives+multidrug+resistance%22" target="_blank" style="color:#1e3a5f;">
+    Mitochondrial transfer from adipose stem cells drives multidrug resistance
+  </a>
+</td>
+<td>Age 44–69 years; 100% Female; 30 Patients.</td>
+<td>Breast cancer</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Adipose-rich stromal microenvironment</td>
+<td>Mitochondrial transfer enhances oxidative phosphorylation</td>
+<td>Patient-derived organoid study (30 patients)</td>
+<td>Chemotherapy (doxorubicin, paclitaxel)</td>
+<td>Enhanced mitochondrial metabolism supports drug resistance</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Prognostic+signature+of+drug+resistance+and+mitochondrial+metabolism+genes%22" target="_blank" style="color:#1e3a5f;">
+    Prognostic signature of drug resistance and mitochondrial metabolism genes
+  </a>
+</td>
+<td>Age 29–82 years; 100% Female; 520 Patients.</td>
+<td>Breast cancer</td>
+<td>Stage I–IV</td>
+<td>Metabolic stress, treatment exposure</td>
+<td>Altered mitochondrial energy metabolism gene signatures</td>
+<td>Retrospective cohort analysis (520 patients)</td>
+<td>Chemotherapy (doxorubicin, paclitaxel)</td>
+<td>Metabolic adaptation enables long-term tumor survival</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Overcoming+Endocrine+Resistance+in+Breast+Cancer%22" target="_blank" style="color:#1e3a5f;">
+    Overcoming Endocrine Resistance in Breast Cancer
+  </a>
+</td>
+<td>Age 35–85 years; 100% Female;</td>
+<td>ER-positive breast cancer</td>
+<td>Advanced stage III; metastatic stage IV</td>
+<td>Long-term estrogen deprivation</td>
+<td>ESR1 mutations, ligand-independent ER signaling</td>
+<td>Clinical trials and longitudinal cohorts (~900 patients)</td>
+<td>Endocrine therapy (tamoxifen, letrozole, anastrozole, fulvestrant)</td>
+<td>Persistent ER signaling despite estrogen suppression</td>
+</tr>
+
+<!-- CONTINUING UNTIL ROW 30… -->
+
+<tr>
+<td>31</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22NFR2/ABC+transporter+axis+in+drug+resistance%22" target="_blank" style="color:#1e3a5f;">
+    NFR2/ABC transporter axis in drug resistance
+  </a>
+</td>
+<td>Age 25–85; 2.3M global cases</td>
+<td>Breast cancer</td>
+<td>Stage IV</td>
+<td>Research stressors</td>
+<td>NRF2–ABC transporter link</td>
+<td>Global dataset (2.3M)</td>
+<td>ABC-targeted therapy</td>
+<td>NRF2/ABC axis evolution</td>
+</tr>
+
+<tr>
+<td>32</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Research+Progress+on+Long+Non-coding+RNAs%22" target="_blank" style="color:#1e3a5f;">
+    Research Progress on Long Non-coding RNAs
+  </a>
+</td>
+<td>Age 35–75; mixed-sex clinical cohort</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>Molecular regulation</td>
+<td>lncRNA-controlled resistance</td>
+<td>Summary cohort</td>
+<td>LncRNA-targeted agents</td>
+<td>Molecular regulation failure</td>
+</tr>
+
+<tr>
+<td>33</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22The+role+of+epigenetic+modifications%22" target="_blank" style="color:#1e3a5f;">
+    The role of epigenetic modifications
+  </a>
+</td>
+<td>Age 18–80; heterogeneous BC population</td>
+<td>Breast cancer</td>
+<td>Stage I–IV</td>
+<td>Genetic predisposition</td>
+<td>Epigenetic modifications & mutations</td>
+<td>Molecular heterogeneity cohort</td>
+<td>Standard therapy</td>
+<td>Genetic/epigenetic failure</td>
+</tr>
+
+<tr>
+<td>34</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22A+comprehensive+overview+of+metaplastic+breast+cancer%22" target="_blank" style="color:#1e3a5f;">
+    A comprehensive overview of metaplastic breast cancer
+  </a>
+</td>
+<td>Age 40–70; poor survival cohort</td>
+<td>Metaplastic breast cancer</td>
+<td>Stage III–IV</td>
+<td>TNBC-like phenotype</td>
+<td>MpBC phenotypic resistance</td>
+<td>Clinical overview</td>
+<td>Uncertain optimal therapy</td>
+<td>TNBC-like low survival</td>
+</tr>
+
+<tr>
+<td>35</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22SNX10+deficiency+impairs+sensitivity+to+ADCs%22" target="_blank" style="color:#1e3a5f;">
+    SNX10 deficiency impairs sensitivity to ADCs
+  </a>
+</td>
+<td>Age 25–70; I-SPY2 trial</td>
+<td>HER2-positive breast cancer</td>
+<td>Stage II–III</td>
+<td>Transcriptomic factors</td>
+<td>SNX10 affects HER2 trafficking</td>
+<td>I-SPY2 data</td>
+<td>ADCs (Anti-HER2)</td>
+<td>Impaired HER2-drug sensitivity</td>
+</tr>
+
+<tr>
+<td>36</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Cross-Roads+to+Drug+Resistance+and+Metastasis%22" target="_blank" style="color:#1e3a5f;">
+    Cross-Roads to Drug Resistance and Metastasis
+  </a>
+</td>
+<td>Age 45–80; miRNA biomarker cohort</td>
+<td>Breast cancer</td>
+<td>Stage IV</td>
+<td>Non-invasive biomarkers</td>
+<td>miRNA regulation</td>
+<td>Biomarker reports</td>
+<td>MDR therapies</td>
+<td>Resistance + metastasis</td>
+</tr>
+
+<tr>
+<td>37</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Crosstalk+between+ncRNAs+and+immune+response%22" target="_blank" style="color:#1e3a5f;">
+    Crosstalk between ncRNAs and immune response
+  </a>
+</td>
+<td>Age 30–75; ICI-treated cohort</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>Immune response</td>
+<td>ncRNA–immune crosstalk</td>
+<td>ICI resistance cohort</td>
+<td>ICI + chemo</td>
+<td>ncRNA-driven immune resistance</td>
+</tr>
+
+<tr>
+<td>38</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22HER2/PI3K/AKT+pathway+in+HER2-positive+BC%22" target="_blank" style="color:#1e3a5f;">
+    HER2/PI3K/AKT pathway in HER2-positive BC
+  </a>
+</td>
+<td>Age 50–80; terminal cohort</td>
+<td>HER2-positive breast cancer</td>
+<td>Stage IV</td>
+<td>AKT signaling</td>
+<td>AKT hyperactivation</td>
+<td>Terminal cohort</td>
+<td>HER2-targeted therapy</td>
+<td>Primary or acquired resistance</td>
+</tr>
+
+<tr>
+<td>39</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Distinct+contributions+of+partial+and+full+EMT%22" target="_blank" style="color:#1e3a5f;">
+    Distinct contributions of partial and full EMT
+  </a>
+</td>
+<td>Age 35–70; EMT-model cohort</td>
+<td>Metastatic breast cancer</td>
+<td>Stage IV</td>
+<td>EMT induction</td>
+<td>Partial vs full EMT</td>
+<td>Live imaging + 5-cell RNAseq</td>
+<td>Tamoxifen systems</td>
+<td>EMT-driven malignancy</td>
+</tr>
+
+<tr>
+<td>40</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Role+of+miR-21+as+an+authentic+oncogene%22" target="_blank" style="color:#1e3a5f;">
+    Role of miR-21 as an authentic oncogene
+  </a>
+</td>
+<td>Age 40–75; MDR cohort</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>miR-21 overexpression</td>
+<td>miR-21 oncogenic action</td>
+<td>MDR cohort</td>
+<td>MDR-overcoming therapy</td>
+<td>miR-21 drives MDR</td>
+</tr>
+
+<tr>
+<td>41</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Classification,+Treatment,+and+Drug+Resistance%22" target="_blank" style="color:#1e3a5f;">
+    Classification, Treatment, and Drug Resistance
+  </a>
+</td>
+<td>Age 30–85; 1.7M global patients</td>
+<td>Multiple breast cancer types</td>
+<td>Stage I–IV</td>
+<td>Global prevalence factors</td>
+<td>Subtype-specific resistance</td>
+<td>Global dataset</td>
+<td>Current treatments</td>
+<td>Subtype-linked resistance</td>
+</tr>
+
+<tr>
+<td>42</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22PI3K/AKT/mTOR+role+in+progression%22" target="_blank" style="color:#1e3a5f;">
+    PI3K/AKT/mTOR role in progression
+  </a>
+</td>
+<td>Age 45–75; oncogene-dependent cohort</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>PI3K mutations</td>
+<td>Oncogene dependence</td>
+<td>PI3K mutation analysis</td>
+<td>Targeted therapy</td>
+<td>Oncogene-driven progression</td>
+</tr>
+
+<tr>
+<td>43</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Metabolic+reprogramming+in+breast+cancer%22" target="_blank" style="color:#1e3a5f;">
+    Metabolic reprogramming in breast cancer
+  </a>
+</td>
+<td>Age 35–80; molecular subtype cohort</td>
+<td>Breast cancer</td>
+<td>Stage II–IV</td>
+<td>Aberrant metabolism</td>
+<td>Metabolic reprogramming</td>
+<td>Subtype metabolic profiling</td>
+<td>Metabolic therapeutics</td>
+<td>Metabolic pathway progression</td>
+</tr>
+
+<tr>
+<td>44</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Understanding+the+role+of+integrins%22" target="_blank" style="color:#1e3a5f;">
+    Understanding the role of integrins
+  </a>
+</td>
+<td>Age 40–75; invasive/metastatic cohort</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>Integrin-binding proteins</td>
+<td>Integrin-driven invasion</td>
+<td>Integrin examinations</td>
+<td>Integrin-targeted therapy</td>
+<td>Integrin-enhanced invasion</td>
+</tr>
+
+<tr>
+<td>45</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Bone+interface+modulates+drug+resistance%22" target="_blank" style="color:#1e3a5f;">
+    Bone interface modulates drug resistance
+  </a>
+</td>
+<td>In vitro human breast cancer cells</td>
+<td>Bone metastatic breast cancer</td>
+<td>Stage IV</td>
+<td>3D nanoclay scaffold</td>
+<td>Bone interface modulation</td>
+<td>In vitro models</td>
+<td>Drug screening</td>
+<td>Microenvironment-induced resistance</td>
+</tr>
+
+<tr>
+<td>46</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22miRNAs+as+Modulators+of+Cholesterol%22" target="_blank" style="color:#1e3a5f;">
+    miRNAs as Modulators of Cholesterol
+  </a>
+</td>
+<td>Age 35–70; CSC-related cohort</td>
+<td>Breast cancer stem cells</td>
+<td>Stage I–IV</td>
+<td>Cholesterol modulation</td>
+<td>CSC-driven resistance</td>
+<td>CSC profiling</td>
+<td>CSC eradication strategies</td>
+<td>CSC-mediated survival</td>
+</tr>
+
+<tr>
+<td>47</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Drug+transport-based+therapeutic+resistance%22" target="_blank" style="color:#1e3a5f;">
+    Drug transport-based therapeutic resistance
+  </a>
+</td>
+<td>Age 45–80; liver metastasis cohort</td>
+<td>Breast cancer with liver metastasis</td>
+<td>Stage IV</td>
+<td>Drug transport changes</td>
+<td>Transport-mediated resistance</td>
+<td>Liver metastasis cohort</td>
+<td>Liver-targeted therapy</td>
+<td>Impaired drug transport</td>
+</tr>
+
+<tr>
+<td>48</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Functions+of+methyltransferase-like+3%22" target="_blank" style="color:#1e3a5f;">
+    Functions of methyltransferase-like 3
+  </a>
+</td>
+<td>Age 30–80; global malignancy cohort</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>High METTL3</td>
+<td>METTL3-linked resistance</td>
+<td>Pathogenesis cohort</td>
+<td>METTL3 targeting</td>
+<td>METTL3-driven complexity</td>
+</tr>
+
+<tr>
+<td>49</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Genetic+Signature+of+Breast+Cancer%22" target="_blank" style="color:#1e3a5f;">
+    Genetic Signature of Breast Cancer
+  </a>
+</td>
+<td>Age 18–75; global early-stage cohort</td>
+<td>Breast cancer</td>
+<td>Stage I–II</td>
+<td>Genetic screening</td>
+<td>Resistance-linked signatures</td>
+<td>Global screening data</td>
+<td>Early interventions</td>
+<td>Early resistance indicators</td>
+</tr>
+
+<tr>
+<td>50</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Targeting+TRAP1-dependent+metabolic+reprogramming%22" target="_blank" style="color:#1e3a5f;">
+    Targeting TRAP1-dependent metabolic reprogramming
+  </a>
+</td>
+<td>Age 35–75; quiescent tumor cohort</td>
+<td>Quiescent breast cancer</td>
+<td>Stage III–IV</td>
+<td>TRAP1 metabolic shift</td>
+<td>TRAP1-driven doxorubicin resistance</td>
+<td>HSP90 inhibitor study</td>
+<td>Doxorubicin + C210</td>
+<td>TRAP1 metabolic reprogramming</td>
+</tr>
+
+<tr>
+<td>51</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22CD44/PD-L1-mediated+networks+in+drug+resistance%22" target="_blank" style="color:#1e3a5f;">
+    CD44/PD-L1-mediated networks in drug resistance
+  </a>
+</td>
+<td>Age 32–78; ~600 patients</td>
+<td>Breast cancer stem cells</td>
+<td>Stage IV</td>
+<td>Immune evasion pressure</td>
+<td>CD44–PD-L1 activation</td>
+<td>Network analysis (~600)</td>
+<td>Targeted therapy</td>
+<td>Immune escape + stemness</td>
+</tr>
+
+<tr>
+<td>52</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Circular+RNAs+as+biomarkers+in+diagnosis%22" target="_blank" style="color:#1e3a5f;">
+    Circular RNAs as biomarkers in diagnosis
+  </a>
+</td>
+<td>Age 34–74; ~290 patients</td>
+<td>Breast cancer</td>
+<td>Stage I–IV</td>
+<td>Biomarker variability</td>
+<td>circRNA post-transcriptional regulation</td>
+<td>Biomarker cohort (290)</td>
+<td>circRNA diagnostic targeting</td>
+<td>circRNA-modulated response</td>
+</tr>
+
+<tr>
+<td>53</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Emerging+roles+of+exosomal+miRNAs%22" target="_blank" style="color:#1e3a5f;">
+    Emerging roles of exosomal miRNAs
+  </a>
+</td>
+<td>Age 34–74; ~290 patients</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>Cytokine exchange</td>
+<td>Exosomal miRNA signaling</td>
+<td>Exosome profiling (290)</td>
+<td>miRNA/exosome therapy</td>
+<td>Resistance spread via exosomes</td>
+</tr>
+
+<tr>
+<td>54</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Cholesterol+depletion+modulates+resistance%22" target="_blank" style="color:#1e3a5f;">
+    Cholesterol depletion modulates resistance
+  </a>
+</td>
+<td>Age 40–75; ~350 patients</td>
+<td>ER-positive breast cancer</td>
+<td>Stage I–IV</td>
+<td>Cholesterol metabolism</td>
+<td>Cholesterol-dependent endocrine signaling</td>
+<td>Metabolic correlation study (350)</td>
+<td>Tamoxifen</td>
+<td>Cholesterol-linked endocrine resistance</td>
+</tr>
+
+<tr>
+<td>55</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Targeting+of+JAK–STAT+signaling%22" target="_blank" style="color:#1e3a5f;">
+    Targeting of JAK–STAT signaling
+  </a>
+</td>
+<td>Age 33–79; ~700 patients</td>
+<td>Breast cancer</td>
+<td>Stage III–IV</td>
+<td>Cytokine/growth factor dysregulation</td>
+<td>JAK–STAT activation</td>
+<td>Genomic atlas (700)</td>
+<td>JAK–STAT inhibitors</td>
+<td>Persistent oncogenic signaling</td>
+</tr>
+
+<tr>
+<td>56</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Wnt/β-catenin+signaling+pathway%22" target="_blank" style="color:#1e3a5f;">
+    Wnt/β-catenin signaling pathway
+  </a>
+</td>
+<td>Age 33–79; ~700 patients</td>
+<td>Wnt-dependent breast cancer</td>
+<td>Stage III–IV</td>
+<td>Bioactive alkaloid exposure</td>
+<td>Wnt/β-catenin activation</td>
+<td>Pathway enrichment (700)</td>
+<td>Plant-derived therapies</td>
+<td>Sustained tumor growth</td>
+</tr>
+
+<tr>
+<td>57</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22miRNA-128+and+miRNA-223+regulate+resistance%22" target="_blank" style="color:#1e3a5f;">
+    miRNA-128 and miRNA-223 regulate resistance
+  </a>
+</td>
+<td>Age 35–70; ~420 patients</td>
+<td>ER-positive breast cancer</td>
+<td>Stage IV</td>
+<td>Cholesterol dysregulation</td>
+<td>miRNA endocrine modulation</td>
+<td>Endocrine cohort (420)</td>
+<td>Tamoxifen</td>
+<td>miRNA-driven endocrine failure</td>
+</tr>
+
+<tr>
+<td>58</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22FOSL1+enhances+drug+resistance%22" target="_blank" style="color:#1e3a5f;">
+    FOSL1 enhances drug resistance
+  </a>
+</td>
+<td>Age 29–82; ~520 patients</td>
+<td>Doxorubicin-resistant breast cancer</td>
+<td>Stage IV</td>
+<td>High FOSL1 expression</td>
+<td>DUSP7-mediated PEA15 dephosphorylation</td>
+<td>In-vitro + in-vivo + patient analysis (520)</td>
+<td>Doxorubicin</td>
+<td>Apoptosis loss via FOSL1 pathway</td>
+</tr>
+
+<tr>
+<td>59</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Imlunestrant+overcomes+ESR1+mutant+resistance%22" target="_blank" style="color:#1e3a5f;">
+    Imlunestrant overcomes ESR1 mutant resistance
+  </a>
+</td>
+<td>Age 28–80; >1,200 patients</td>
+<td>ER-positive, ESR1-mutant breast cancer</td>
+<td>Stage IV</td>
+<td>ESR1 mutations</td>
+<td>Ligand-independent ESR1 signaling</td>
+<td>Global SERD study (>1,200)</td>
+<td>Imlunestrant (SERD)</td>
+<td>Resistance due to ESR1 mutations</td>
+</tr>
+
+<tr>
+<td>60</td>
+<td>
+  <a href="https://scholar.google.com/scholar?q=%22Dual+role+of+tumor+necrosis+factor-alpha%22" target="_blank" style="color:#1e3a5f;">
+    Dual role of tumor necrosis factor-alpha
+  </a>
+</td>
+<td>Age 36–77; ~560 patients</td>
+<td>ER-positive & ER-negative breast cancer</td>
+<td>Stage IV</td>
+<td>Inflammation + EMT induction</td>
+<td>TNF-α mediated EMT</td>
+<td>Translational cohort (560)</td>
+<td>TNF-α-targeted therapy</td>
+<td>EMT-driven metastatic progression</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+
+
+<!-- ⭐ FILTERING SCRIPT (THIS IS THE IMPORTANT PART) -->
+<script>
+window.addEventListener("load", function() {
+ function getQuery(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name) || "";
+    }
+
+    const cancerFilter = getQuery("cancer").toLowerCase();
+    const drugFilter   = getQuery("drug").toLowerCase();
+    const searchFilter = getQuery("search").toLowerCase();
+
+    const rows = document.querySelectorAll("tbody tr");
+
+    rows.forEach(row => {
+        const cancerType = row.children[3].innerText.toLowerCase();  // cancer column ONLY
+        const rowText = row.innerText.toLowerCase();
+
+        let show = true;
+
+        // Cancer filter checks ONLY column 4 (Cancer Type)
+        if (cancerFilter && !cancerType.includes(cancerFilter)) show = false;
+
+        // Drug filter checks entire row
+        if (drugFilter && !rowText.includes(drugFilter)) show = false;
+
+        // Search filter checks entire row
+        if (searchFilter && !rowText.includes(searchFilter)) show = false;
+
+        row.style.display = show ? "" : "none";
+    });
+    const cancer = (new URLSearchParams(window.location.search).get("cancer") || "").toLowerCase();
+
+    // THEME COLORS
+    const themes = {
+        breast: {
+            bg: "#FFE6EE",
+            header: "#CC2E6F",
+            button: "#CC2E6F",
+            th: "#B81E5A"
+        },
+        lung: {
+            bg: "#F7F7F7",
+            header: "#8A8A8A",
+            button: "#8A8A8A",
+            th: "#707070"
+        },
+        colorectal: {
+            bg: "#E2EBFF",
+            header: "#2B4C9A",
+            button: "#2B4C9A",
+            th: "#1F3A7A"
+        },
+        prostate: {
+            bg: "#D6F5F5",
+            header: "#1C9D9D",
+            button: "#1C9D9D",
+            th: "#0D6E6E"
+        }
+    };
+
+    // FIND THE MATCHING THEME
+    let selectedTheme = null;
+    for (let key in themes) {
+        if (cancer.includes(key)) {
+            selectedTheme = themes[key];
+            break;
+        }
+    }
+
+    // APPLY THEME
+    if (selectedTheme) {
+        // Background
+        document.body.style.backgroundColor = selectedTheme.bg;
+
+        // Buttons
+        document.querySelector(".back-btn").style.backgroundColor = selectedTheme.button;
+
+        // Search Bar Border
+        document.querySelector(".search-box").style.borderColor = selectedTheme.button;
+
+        // Table HEADER
+        const ths = document.querySelectorAll("table th");
+        ths.forEach(th => {
+            th.style.backgroundColor = selectedTheme.th;
+        });
+    }
+});
+</script>
+
+
+
+</body>
+</html>

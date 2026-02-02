@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RESITRACK</title>
+
+<!-- LOGO / FAVICON -->
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: #f2f5fa;
+        color: #2b2b2b;
+    }
+
+    /* HEADER */
+    .header {
+        background: #1e3a5f;
+        padding: 26px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    }
+
+    /* NEW: Logo Image */
+    .logo-img {
+        position: absolute;
+        left: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .logo-img img {
+        height: 70px;   /* Adjust size */
+        width: auto;
+    }
+
+    .header-title {
+        color: #ffffff;
+        font-size: 27px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    /* SEARCH */
+    .search-container {
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .search-box {
+        width: 60%;
+        padding: 15px 20px;
+        border-radius: 14px;
+        border: 1px solid #c5cfdb;
+        background: #ffffff;
+        font-size: 15px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        transition: 0.2s ease;
+    }
+
+    .search-box:focus {
+        outline: none;
+        border-color: #1e3a5f;
+        box-shadow: 0 0 11px rgba(30,58,95,0.3);
+    }
+
+    /* FILTERS */
+    .filter-box {
+        background: #ffffff;
+        margin: 25px auto 35px auto;
+        padding: 30px 20px;
+        width: 62%;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        border: 1px solid #e3e8ef;
+    }
+
+    .filter-box select {
+        padding: 13px 14px;
+        width: 260px;
+        border-radius: 12px;
+        border: 1px solid #cfd7e0;
+        background: #f8f9fb;
+        font-size: 15px;
+        transition: 0.2s ease;
+    }
+
+    /* BUTTON */
+    .next-btn {
+        display: block;
+        margin: 0 auto 60px auto;
+        width: 230px;
+        padding: 14px 20px;
+        background: #1e3a5f;
+        color: white;
+        border: none;
+        border-radius: 14px;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        transition: 0.25s ease;
+        letter-spacing: 0.5px;
+    }
+
+    .next-btn:hover {
+        background: #274a78;
+        transform: translateY(-2px);
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo-img">
+        <img src="favicon.png" alt="RT Logo">
+    </div>
+    <div class="header-title">Cancer Drug Resistance</div>
+</div>
+
+<!-- SEARCH BAR -->
+<div class="search-container">
+    <input id="searchInput" type="text" class="search-box" placeholder="Search by paper title, drug, gene, mechanism...">
+</div>
+
+<!-- FILTERS -->
+<div class="filter-box">
+
+    <select id="cancerType">
+        <option value="">Select Cancer Type</option>
+        <option>Breast</option>
+        <option>Lung</option>
+        <option>Colorectal</option>
+        <option>Prostate</option>
+    </select>
+
+    <select id="drugType">
+        <option value="">Select Drug Type</option>
+        <option>Chemotherapy</option>
+        <option>Targeted Therapy</option>
+        <option>Immunotherapy</option>
+        <option>Hormonal Therapy</option>
+    </select>
+
+</div>
+
+<!-- SEARCH BUTTON -->
+<button class="next-btn" onclick="applyFilters()">SEARCH →</button>
+
+<script>
+function applyFilters() {
+    const cancer = document.getElementById("cancerType").value;
+    const drug = document.getElementById("drugType").value;
+    const search = document.getElementById("searchInput").value;
+
+    const url = `nextpage.html?cancer=${encodeURIComponent(cancer)}&drug=${encodeURIComponent(drug)}&search=${encodeURIComponent(search)}`;
+    window.location.href = url;
+}
+</script>
+
+</body>
+</html>
